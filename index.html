@@ -9,7 +9,7 @@
 body{
 margin:0;
 font-family:Georgia,serif;
-background:linear-gradient(180deg,#f8f1e7,#6b1f2a);
+background:linear-gradient(180deg,#f8f1e7,#d9b8b8,#6b1f2a);
 color:white;
 overflow-x:hidden;
 text-align:center;
@@ -104,7 +104,7 @@ days+" Days "+hrs+" Hours "+mins+" Minutes "+secs+" Seconds";
 for(let i=0;i<35;i++){
 let p=document.createElement("div");
 p.className="petal";
-p.innerHTML="✦";
+p.innerHTML='❀';
 p.style.left=Math.random()*100+"%";
 p.style.animationDuration=(6+Math.random()*8)+"s";
 document.body.appendChild(p);
