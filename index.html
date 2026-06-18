@@ -1,0 +1,104 @@
+<!DOCTYPE html><html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spandana ❤️ Karthik Wedding Invitation</title><style>
+body{
+margin:0;
+font-family:Georgia,serif;
+background:linear-gradient(135deg,#fff0f5,#ffe4e1);
+overflow:hidden;
+text-align:center;
+}
+
+.container{
+padding:40px 20px;
+margin-top:50px;
+}
+
+h1{
+font-size:50px;
+color:#c2185b;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{opacity:.7;}
+to{opacity:1;}
+}
+
+.names{
+font-size:38px;
+color:#d81b60;
+font-weight:bold;
+margin:20px 0;
+}
+
+.card{
+background:white;
+width:90%;
+max-width:700px;
+margin:auto;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.countdown{
+font-size:24px;
+margin-top:20px;
+color:#b71c1c;
+font-weight:bold;
+}
+
+.flower{
+position:fixed;
+top:-20px;
+font-size:24px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+}
+}
+</style></head><body><div class="container">
+<div class="card"><h1>💍 Wedding Invitation 💍</h1><div class="names">
+Spandana ❤️ Karthik
+</div><p>
+Together with their families,<br><br>
+request the honour of your presence<br>
+at their wedding celebration.
+</p><h3>📅 27 June 2026</h3>
+<h3>⏰ 08:18 AM</h3>
+<h3>📍 Kothapeta, Avanigadda</h3><div class="countdown" id="timer"></div><p>
+Your love, blessings and presence<br>
+will make our day truly special.
+</p></div>
+</div><script>
+const date=new Date("June 27, 2026 08:18:00").getTime();
+
+setInterval(()=>{
+const now=new Date().getTime();
+const gap=date-now;
+
+const days=Math.floor(gap/(1000*60*60*24));
+const hrs=Math.floor((gap%(1000*60*60*24))/(1000*60*60));
+const mins=Math.floor((gap%(1000*60*60))/(1000*60));
+const secs=Math.floor((gap%(1000*60))/1000);
+
+document.getElementById("timer").innerHTML=
+"⏳ "+days+" Days "+hrs+" Hours "+mins+" Minutes "+secs+" Seconds";
+},1000);
+
+for(let i=0;i<25;i++){
+let flower=document.createElement("div");
+flower.innerHTML="🌸";
+flower.className="flower";
+flower.style.left=Math.random()*100+"%";
+flower.style.animationDuration=(5+Math.random()*10)+"s";
+document.body.appendChild(flower);
+}
+</script></body>
+</html>
