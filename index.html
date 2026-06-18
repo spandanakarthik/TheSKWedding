@@ -1,79 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Spandana & Karthik Wedding Invitation</title>
 <style>
-body{margin:0;font-family:Georgia,serif;background:#f8f1e7;color:#6b1f2a;overflow-x:hidden;scroll-behavior:smooth}
-section{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px}
-.hero{background:linear-gradient(to bottom,#f8f1e7,#f3e4d1)}
-h1{font-size:3rem;margin:0}
-h2{font-size:2.2rem}
-.btn{padding:14px 28px;background:#6b1f2a;color:white;text-decoration:none;border-radius:30px}
-.countdown{font-size:1.5rem;font-weight:bold}
-.fade{animation:fadeIn 2s}
-@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
-.petal{position:fixed;top:-20px;font-size:22px;animation:fall linear infinite;pointer-events:none}
-@keyframes fall{to{transform:translateY(110vh)}}
-.music{position:fixed;bottom:20px;right:20px;background:#6b1f2a;color:#fff;padding:12px 18px;border-radius:25px}
-</style>
-</head>
-<body>
-<div class="music">🎵 Instrumental Music (Add Later)</div>
-
-<section class="hero">
-<div class="fade">
-<h2>A Journey of Love, Laughter & Forever</h2>
-<p>Together with their families</p>
-<a href="#invite" class="btn">Open Invitation</a>
-</div>
-</section>
-
-<section id="invite">
-<h1>SPANDANA</h1>
-<h2>&</h2>
-<h1>KARTHIK</h1>
-<p>Joyfully invite you to celebrate the beginning of their forever.</p>
-</section>
-
-<section>
-<h2>Wedding Details</h2>
-<p>📅 27 June 2026</p>
-<p>⏰ 08:18 AM</p>
-<p>📍 Kothapeta, Avanigadda</p>
-</section>
-
-<section>
-<h2>Counting Down To Forever</h2>
-<div id="timer" class="countdown"></div>
-</section>
-
-<section>
-<h2>Every love story is beautiful,<br>but ours is our favourite.</h2>
-<p>Your presence and blessings will make our day truly memorable.</p>
-</section>
-
-<script>
-const target=new Date("June 27, 2026 08:18:00").getTime();
-setInterval(()=>{
- let now=new Date().getTime();
- let d=target-now;
- let days=Math.floor(d/(1000*60*60*24));
- let hrs=Math.floor((d%(1000*60*60*24))/(1000*60*60));
- let mins=Math.floor((d%(1000*60*60))/(1000*60));
- let secs=Math.floor((d%(1000*60))/1000);
- document.getElementById('timer').innerHTML=`${days} Days ${hrs} Hours ${mins} Minutes ${secs} Seconds`;
-},1000);
-
-for(let i=0;i<35;i++){
- let p=document.createElement('div');
- p.className='petal';
- p.innerHTML='🌸';
- p.style.left=Math.random()*100+'%';
- p.style.animationDuration=(6+Math.random()*8)+'s';
- document.body.appendChild(p);
+body{
+    margin:0;
+    font-family:Georgia, serif;
+    background:linear-gradient(180deg,#f8f1e7,#6b1f2a);
+    color:#f8f1e7;
+    overflow-x:hidden;
+    scroll-behavior:smooth;
 }
-</script>
-</body>
-</html>
+
+section{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero{
+    background:linear-gradient(to bottom,#f8f1e7,#6b1f2a);
+    color:white;
+}
+
+h1{
+    font-size:3rem;
+    margin:0;
+    letter-spacing:3px;
+}
+
+h2{
+    font-size:2.2rem;
+}
+
+.btn{
+    padding:14px 28px;
+    background:#8b2332;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    border:2px solid #f8f1e7;
+}
+
+.countdown{
+    font-size:1.5rem;
+    font-weight:bold;
+}
+
+.fade{
+    animation:fadeIn 2s;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:none;
+    }
+}
+
+.petal{
+    position:fixed;
+    top:-20px;
+    font-size:18px;
+    animation:fall linear infinite;
+    pointer-events:none;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh);
+    }
+}
+
+.music{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#8b2332;
+    color:#fff;
+    padding:12px 18px;
+    border-radius:25px;
+}
+</style>
