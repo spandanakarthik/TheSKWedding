@@ -64,7 +64,13 @@ border-radius:25px;
 
 <body>
 
-<div class="music">🎵 Music</div>
+<button class="music" onclick="playMusic()">
+🎵 Play Music
+</button>
+
+<audio id="bgMusic" loop>
+  <source src="sakhi.mp3" type="audio/mpeg">
+</audio>
 
 <section class="hero">
 <h2>A Journey of Love, Laughter & Forever</h2>
@@ -109,6 +115,9 @@ p.style.left=Math.random()*100+"%";
 p.style.animationDuration=(6+Math.random()*8)+"s";
 document.body.appendChild(p);
 }
+  function playMusic(){
+  document.getElementById("bgMusic").play();
+  }
 </script>
 
 </body>
